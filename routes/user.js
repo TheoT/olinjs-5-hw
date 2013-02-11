@@ -29,8 +29,7 @@ exports.login=function(req,res){
 					user.userID=data.id;
 					user.name=data.name;
 					user.picUrl=picData.data.url;
-					user.style.backgroundCol='#00FF00'
-					req.session.user=user
+					user.style={backgroundCol:'#00FF00'}
 					user.save(function(err){
 						if (err)
 							return console.log(err);
